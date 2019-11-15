@@ -11,6 +11,7 @@ def pdf_process_function(msg):
 
 #
 params = pika.ConnectionParameters("localhost")
+print(params.port)
 connection = pika.BlockingConnection(params)
 channel = connection.channel() # start a channel
 channel.queue_declare(queue='pdfprocess') # Declare a queue
